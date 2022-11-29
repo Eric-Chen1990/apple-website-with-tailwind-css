@@ -7,6 +7,8 @@ type Props = {};
 const ScrollTrigger = (props: Props) => {
 	const { camera, scene } = useThree();
 	useEffect(() => {
+		camera.position.y = 2;
+
 		let mm = gsap.matchMedia();
 
 		mm.add(

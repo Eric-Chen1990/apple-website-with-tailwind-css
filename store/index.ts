@@ -5,6 +5,9 @@ interface ColorState {
 	text: string;
 	rgbColor: string;
 }
+interface AppState {
+	loading: boolean;
+}
 
 const useColorStore = create<ColorState>((set) => ({
 	color: "#9BB5CE",
@@ -12,4 +15,8 @@ const useColorStore = create<ColorState>((set) => ({
 	rgbColor: "155, 181, 206",
 }));
 
-export { useColorStore };
+const useAppStore = create<AppState>((set) => ({
+	loading: true,
+}));
+
+export { useColorStore, useAppStore };
