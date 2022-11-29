@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 
 import { useColorStore } from "store";
 
@@ -68,7 +68,7 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
 		"/draco-gltf/"
 	) as unknown as GLTFResult;
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		materials.Body.color.set(color);
 	}, [color]);
 
