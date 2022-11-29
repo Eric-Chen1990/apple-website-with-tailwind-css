@@ -200,4 +200,4 @@ export function Model(props: JSX.IntrinsicElements["group"]) {
 	);
 }
 
-useGLTF.preload("/3D-Model/scene-transformed.glb");
+useGLTF.preload("/3D-Model/scene-transformed.glb", "/draco-gltf/");
